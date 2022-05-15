@@ -36,7 +36,6 @@ test.only('public file upload', async (t) => {
     },
     responseType: 'json' as ResponseType,
   };
-  console.log({ reqOptions });
   const { body, statusCode } = await got(reqOptions);
   console.log('response', { body, statusCode });
 
