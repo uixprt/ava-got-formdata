@@ -5,6 +5,8 @@ import { FormData as FormDataNode } from 'formdata-node';
 import { fileFromPath } from 'formdata-node/file-from-path';
 import { BASE_URL } from './config/';
 import { getAuthorizationToken } from './utils';
+// @todo using data response type
+// import { PublicFile } from './models';
 
 test.only('public file upload', async (t) => {
   const expectKeys = [
