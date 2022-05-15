@@ -26,7 +26,7 @@ test.only('public file upload', async (t) => {
     'test/fixtures/thumb-lorem-face-3842_thumb.jpg',
   );
   const form = new FormDataNode();
-  form.set('file', await fileFromPath(fullPath, { type: 'text/plain' }));
+  form.set('file', await fileFromPath(fullPath, { type: 'image/png' }));
   const reqOptions = {
     method: 'POST' as Method,
     body: form,
