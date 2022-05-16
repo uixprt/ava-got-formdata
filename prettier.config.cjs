@@ -3,7 +3,5 @@ module.exports = {
   tabWidth: 2,
   semi: true,
   singleQuote: true,
-  plugins: [
-    require.resolve('prettier-plugin-packagejson')
-  ]
+  plugins: [require.resolve('prettier-plugin-packagejson')],
 };
