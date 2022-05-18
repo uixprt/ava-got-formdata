@@ -1,7 +1,10 @@
-# AVA GOT FormData
+# AVA GOT/Axios FormData
 
-API integration test with [AVA](https://github.com/avajs/ava) and [GOT](https://github.com/sindresorhus/got) to make
-file upload request.
+API integration test with 
+[AVA](https://github.com/avajs/ava) and 
+[GOT](https://github.com/sindresorhus/got) or
+[axios](https://github.com/axios/axios)
+to make file upload request.
 
 ## Install and Run
 
