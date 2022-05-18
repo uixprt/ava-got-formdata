@@ -1,6 +1,6 @@
 import { Base } from './base';
 
-export interface PublicFile extends Base {
+export interface File extends Base {
   url: string;
   resizeUrl: string;
   type: string;

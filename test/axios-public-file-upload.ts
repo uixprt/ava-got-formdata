@@ -1,28 +1,13 @@
 import test from 'ava';
-import axios from 'axios';
-import FormData from 'form-data';
 import { BASE_URL } from './config/';
-import { getAuthorizationToken } from './utils';
+import { getAuthorizationToken, uploadPublicFileFromUrl } from './utils';
 
 test.only('public file upload', async (t) => {
-  const jwt = await getAuthorizationToken();
-  const imageName = `thumb-lorem-face-${Math.floor(
+  const token = await getAuthorizationToken();
+  const fileUrl = `https://faces-img.xcdn.link/thumb-lorem-face-${Math.floor(
     Math.random() * 6796,
   )}_thumb.jpg`;
-  const imageUrl = `https://faces-img.xcdn.link/${imageName}`;
-
-  const { data: stream } = await axios.get(imageUrl, {
-    responseType: 'stream',
-  });
-  
-  const form = new FormData();
-  form.append('file', stream);
-
-  const { data } = await axios.post(`${BASE_URL}files/public`, form, {
-    headers: {
-      authorization: jwt,
-    },
-  });
+  const data = await uploadPublicFileFromUrl(fileUrl, BASE_URL, token);
 
   console.log(data);
 

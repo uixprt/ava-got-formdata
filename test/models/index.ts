@@ -1,1 +1,1 @@
-export type { PublicFile } from './public-file';
+export type { File } from './file';
